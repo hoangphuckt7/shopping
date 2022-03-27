@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    padding: 20px;
+}
+.item{
+    flex: 1;
+    height: 70vh;
+    margin: 3px;
+    position: relative;
+}
+.itemImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.itemInfo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.itemTitle{
+    color:white;
+    margin-bottom: 20px;
+}
+.btn{
+    border:none;
+    padding: 10px;
+    background-color: white;
+    color:gray;
+    cursor: pointer;
+    font-weight: 600;
+    transform: inherit;
+}

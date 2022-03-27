@@ -1,0 +1,56 @@
+.container{
+    background: 
+        url('https://preview.colorlib.com/theme/bootstrap/login-form-20/images/xbg.jpg.pagespeed.ic.tiVxeakBSd.webp') no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.fillter{
+    background-color: rgba(0,0,0,.3);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.warpper, .form{
+    display: flex;
+    flex-direction: column;
+}
+.warpper{
+    width: 40%;
+    align-items: center;
+}
+.form{
+    width: 50%;
+}
+.input{
+    border-radius: 50px;
+    padding: 18px;
+    background: rgba(255,255,255,.08);
+    color: white;
+    outline: none;
+    border: 1px solid transparent;
+    transition: .3s;
+}
+.input::placeholder{
+    color: #d9d9d9;
+    font-size: 16px;
+}
+.input:hover{
+    border-color:rgba(255,255,255,.4) ;
+    background: transparent;
+}
+.button{
+    transform: none;
+    margin: 10px 0;
+    background-color: #fbceb5;
+    width: 50%;
+    border-radius: 50px;
+    color: black;
+    padding: 20px;
+    font-size: 16px;
+}
