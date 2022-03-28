@@ -32,13 +32,24 @@ function Products(props) {
           )
         )
       );
-  }, [products, cat, filters]);
+  }, [cat, products, filters]);
 
-  useEffect(()=>{
-    if(sort === 'newest'){
-      setFilteredProducts()
+  useEffect(() => {
+    if (sort === "newest") {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) => a.createdAt - b.createdAt)
+      );
+    } else if (sort === "asc") {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) => a.price - b.price)
+      );
+    } else {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) => b.price - a.price)
+      );
     }
-  },[sort])
+  }, [sort]);
+
   return (
     <div
       style={{
@@ -48,9 +59,11 @@ function Products(props) {
         justifyContent: "space-between",
       }}
     >
-      {filteredProducts.map((item) => (
-        <ProductItem item={item} key={item._id} />
-      ))}
+      {cat
+        ? filteredProducts.map((item) => (
+            <ProductItem item={item} key={item.id} />
+          ))
+        : products.map((item) => <ProductItem item={item} key={item.id} />)}
     </div>
   );
 }

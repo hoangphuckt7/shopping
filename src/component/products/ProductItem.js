@@ -1,6 +1,7 @@
 import { FavoriteBorder, Search, ShoppingCart } from "@mui/icons-material";
 import React from "react";
 import styles from "./Products.module.css";
+import { Link } from "react-router-dom";
 
 function ProductItem({ item }) {
   return (
@@ -14,9 +15,11 @@ function ProductItem({ item }) {
         <div className={styles.infoIcon}>
           <ShoppingCart />
         </div>
-        <div className={styles.infoIcon}>
-          <Search />
-        </div>
+        <Link to={`/product/${item._id}`}>
+          <div className={styles.infoIcon}>
+            <Search />
+          </div>
+        </Link>
       </div>
     </div>
   );
